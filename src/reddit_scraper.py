@@ -9,7 +9,7 @@ def fetch_posts(query="deprem", subreddit="turkey", limit=1500):
 
     df = pd.DataFrame(posts, columns=["title", "content"])
 
-    # 👇 Klasör yoksa oluştur
+    #  Klasör yoksa oluştur
     os.makedirs("data", exist_ok=True)
 
     df.to_csv("data/reddit_posts.csv", index=False)
